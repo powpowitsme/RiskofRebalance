@@ -396,3 +396,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/RiskofRebalance/RiskofRebalance.csproj
+/RiskofRebalance.sln

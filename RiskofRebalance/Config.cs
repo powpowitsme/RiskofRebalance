@@ -10,8 +10,6 @@ namespace RiskofRebalance
     {
         public static ConfigFile ItemCfg;
         public static ConfigFile SurvivorCfg;
-        public static ConfigFile MonsterCfg;
-        public static ConfigFile SpawnpoolCfg;
         public static ConfigFile GeneralCfg;
 
         //public static ConfigFile SurvivorCrocoCfg;
@@ -128,7 +126,7 @@ namespace RiskofRebalance
 
         private static void ConfigVoidItems()
         {
-            ///PlasmaShrimp.enabled = ItemCfg.Bind(voidString, "Plasma Shrimp", true, itemConfigDescString).Value;
+            PlasmaShrimp.enabled = ItemCfg.Bind(voidString, "Plasma Shrimp", true, itemConfigDescString).Value;
             Polylute.enabled = ItemCfg.Bind(voidString, "Polylute", true, itemConfigDescString).Value;
         }
 
@@ -152,10 +150,6 @@ namespace RiskofRebalance
         }
 
         private static void ConfigEquipment()
-        {
-        }
-
-        private static void ConfigFireSelect()
         {
         }
 
@@ -249,8 +243,6 @@ namespace RiskofRebalance
             Survivors.DLC1.Railgunner.FixBungus.enabled = SurvivorCfg.Bind(railgunnerString, "Fix Bungus", true, "Removes self knockback force when on the ground.").Value;
             RailgunnerCore.slowFieldChanges = SurvivorCfg.Bind(railgunnerString, "Polar Field Device Changes", true, "Enable changes to this skill.").Value;
             */
-
-            ConfigFireSelect();
         }
 
         /*

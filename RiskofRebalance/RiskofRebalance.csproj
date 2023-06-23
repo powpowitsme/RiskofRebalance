@@ -35,5 +35,13 @@
     <NoWarn>NU1701</NoWarn>
   </PackageReference>
   </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Items\Legendary\" />
+    <Folder Include="Items\Lunar\" />
+    <Folder Include="Items\Boss\" />
+    <Folder Include="Items\Equipment\" />
+    <Folder Include="Items\Uncommon\" />
+  </ItemGroup>
 
 </Project>

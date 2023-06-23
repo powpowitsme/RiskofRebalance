@@ -1,4 +1,5 @@
-﻿using RiskofRebalance.Items;
+﻿using RiskofRebalance.Items.Common;
+using RiskofRebalance.Items.Void;
 using RoR2;
 
 namespace RiskofRebalance.Managers
@@ -6,11 +7,12 @@ namespace RiskofRebalance.Managers
     public class ItemManager
     {
         public static bool enabled = true;
-        public static bool uncommonEnabled = true;
         public static bool commonEnabled = true;
+        public static bool uncommonEnabled = true;
         public static bool legendaryEnabled = true;
         public static bool bossEnabled = true;
         public static bool lunarEnabled = true;
+        public static bool voidEnabled = true;
         public static bool equipmentEnabled = true;
 
         public static ItemDef[] changedItemPickups = new ItemDef[0];
@@ -50,6 +52,8 @@ namespace RiskofRebalance.Managers
 
         private void ModifyVoid()
         {
+            if (!voidEnabled) return;
+            new PlasmaShrimp();
             new Polylute();
         }
 

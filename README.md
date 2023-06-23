@@ -7,6 +7,7 @@ Changes can apply to things such as Items, Buffs, Survivors, and more.
 # Credits
 
 - **powpowitsme** - Lead Developer
+- **Moffein** - RiskyMod repurposed code
 - **basicguitar** - Feedback & Ideas
 - **LobAutumny** - Feedback & Ideas
 - **Anonymous Contributors**

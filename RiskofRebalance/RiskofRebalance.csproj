@@ -6,6 +6,14 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;Publicizer001</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;Publicizer001</NoWarn>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="libs\**" />
     <EmbeddedResource Remove="libs\**" />
@@ -18,6 +26,7 @@
     <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
   </PackageReference>
   <PackageReference Include="BepInEx.Core" Version="5.4.21" />
+  <PackageReference Include="R2API.Items" Version="1.0.3" />
   <PackageReference Include="R2API.Language" Version="1.0.1" />
   <PackageReference Include="R2API.RecalculateStats" Version="1.2.0" />
   <PackageReference Include="RiskOfRain2.GameLibs" Version="1.2.4-r.0" />

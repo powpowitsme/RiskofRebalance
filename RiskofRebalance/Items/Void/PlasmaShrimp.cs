@@ -3,10 +3,11 @@ using RoR2;
 using System;
 using System.Collections.Generic;
 
-namespace RiskofRebalance.Items
+namespace RiskofRebalance.Items.Void
 {
-    public class Polylute
+    public class PlasmaShrimp
     {
+        public static bool enabled = true;
         private readonly Dictionary<string, string> DefaultLanguage = new();
         public void Awake()
         {
@@ -22,7 +23,7 @@ namespace RiskofRebalance.Items
             }
             catch (Exception e)
             {
-                MainFile.logger.LogError(e.Message + " - " + e.StackTrace);
+                RiskofRebalance.logger.LogError(e.Message + " - " + e.StackTrace);
             }
         }
 

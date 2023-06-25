@@ -9,7 +9,7 @@ namespace RiskofRebalance.Buffs
 
             try
             {
-
+                //PLEASE change this later, does not work right now?
                 RoR2.RoR2Application.onLoad += () =>
                 {
                     RoR2.DotController.dotDefs[8].damageCoefficient += 2f;
@@ -18,7 +18,7 @@ namespace RiskofRebalance.Buffs
 
             catch (Exception e)
             {
-                RiskofRebalance.logger.LogError(e.Message + " - " + e.StackTrace);
+                Log.Error(e.Message + " - " + e.StackTrace);
             }
         }
     }

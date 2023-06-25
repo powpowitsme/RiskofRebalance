@@ -398,3 +398,5 @@ FodyWeavers.xsd
 *.sln.iml
 /RiskofRebalance/RiskofRebalance.csproj
 /RiskofRebalance.sln
+/RiskofRebalance/Buffs/Collapse.cs
+/RiskofRebalance/Properties/launchSettings.json

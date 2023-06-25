@@ -139,24 +139,24 @@ namespace RiskofRebalance.Managers
                                 OnCharacterDeathInventoryActions.Invoke(self, damageReport, attackerBody, attackerInventory, victimBody);
                             }
                             /*
-                            if (AssistManager.initialized && RiskyMod.assistManager)
+                            if (AssistManager.initialized && RiskofRebalance.assistManager)
                             {
                                 //On-death is handled by assist manager to prevent having a bunch of duplicated code.
                                 //Need to add an assist here since it's called before OnHitEnemy.
-                                RiskyMod.assistManager.AddAssist(attackerBody, victimBody, AssistManager.assistLength);
+                                RiskofRebalance.assistManager.AddAssist(attackerBody, victimBody, AssistManager.assistLength);
                                 if ((damageInfo.damageType & DamageType.ResetCooldownsOnKill) > DamageType.Generic)
                                 {
-                                    RiskyMod.assistManager.AddDirectAssist(attackerBody, victimBody, BanditSpecialGracePeriod.GetDuration(attackerBody), AssistManager.DirectAssistType.ResetCooldowns);
+                                    RiskofRebalance.assistManager.AddDirectAssist(attackerBody, victimBody, BanditSpecialGracePeriod.GetDuration(attackerBody), AssistManager.DirectAssistType.ResetCooldowns);
                                 }
                                 if ((damageInfo.damageType & DamageType.GiveSkullOnKill) > DamageType.Generic)
                                 {
-                                    RiskyMod.assistManager.AddDirectAssist(attackerBody, victimBody, BanditSpecialGracePeriod.GetDuration(attackerBody), AssistManager.DirectAssistType.BanditSkull);
+                                    RiskofRebalance.assistManager.AddDirectAssist(attackerBody, victimBody, BanditSpecialGracePeriod.GetDuration(attackerBody), AssistManager.DirectAssistType.BanditSkull);
                                 }
                                 if (damageInfo.HasModdedDamageType(SharedDamageTypes.CrocoBiteHealOnKill))
                                 {
-                                    RiskyMod.assistManager.AddDirectAssist(attackerBody, victimBody, AssistManager.directAssistLength, AssistManager.DirectAssistType.CrocoBiteHealOnKill);
+                                    RiskofRebalance.assistManager.AddDirectAssist(attackerBody, victimBody, AssistManager.directAssistLength, AssistManager.DirectAssistType.CrocoBiteHealOnKill);
                                 }
-                                RiskyMod.assistManager.TriggerAssists(victimBody, attackerBody, damageInfo);
+                                RiskofRebalance.assistManager.TriggerAssists(victimBody, attackerBody, damageInfo);
                             }
                             */
                         }

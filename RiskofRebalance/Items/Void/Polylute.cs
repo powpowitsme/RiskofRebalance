@@ -23,7 +23,7 @@ namespace RiskofRebalance.Items.Void
             }
             catch (Exception e)
             {
-                RiskofRebalance.logger.LogError(e.Message + " - " + e.StackTrace);
+                Log.Error(e.Message + " - " + e.StackTrace);
             }
         }
 

@@ -3,6 +3,7 @@ using MonoMod.Cil;
 using R2API;
 using RiskofRebalance.Managers;
 using RoR2;
+using UnityEngine;
 
 namespace RiskofRebalance.Items.Common
 {
@@ -38,14 +39,14 @@ namespace RiskofRebalance.Items.Common
         {
             HG.ArrayUtils.ArrayAppend(ref ItemManager.changedItemPickups, RoR2Content.Items.FlatHealth);
             HG.ArrayUtils.ArrayAppend(ref ItemManager.changedItemDescs, RoR2Content.Items.FlatHealth);
-            Managers.ChangeManager.RemoveItemTag(RoR2Content.Items.FlatHealth, ItemTag.OnKillEffect);
+            ChangeManager.RemoveItemTag(RoR2Content.Items.FlatHealth, ItemTag.OnKillEffect);
         }
         private static void HandleStatsInventory(CharacterBody sender, RecalculateStatsAPI.StatHookEventArgs args, Inventory inventory)
         {
             int steakCount = sender.inventory.GetItemCount(RoR2Content.Items.FlatHealth);
             if (steakCount > 0)
             {
-                args.baseHealthAdd += 0.08f + 0.06f * (steakCount - 1);
+                args.healthMultAdd += 0.08f + 0.06f * (steakCount - 1);
             }
         }
 

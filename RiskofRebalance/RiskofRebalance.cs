@@ -1,8 +1,10 @@
 ﻿using BepInEx;
-using BepInEx.Logging;
 using R2API;
 using R2API.Utils;
 using RiskofRebalance.Managers;
+using RiskofRebalance.Items;
+///using RiskofRebalance.Buffs;
+///using RiskofRebalance.Survivors;
 using RoR2;
 
 namespace RiskofRebalance
@@ -15,12 +17,10 @@ namespace RiskofRebalance
         public static ItemDef emptyItemDef = null;
         public static BuffDef emptyBuffDef = null;
         public static PluginInfo pluginInfo;
-        internal static ManualLogSource logger;
 
         public void Awake()
         {
             Log.Init(Logger);
-            logger = base.Logger;
             Log.Message("Risk of Rebalance initialized!");
             /*
             Managers.ChangeManager instance = new();
@@ -31,10 +31,12 @@ namespace RiskofRebalance
             //Check this first since config relies on it
 
             pluginInfo = Info;
+            ChangeManager.Init();
             ConfigFiles.Init();
 
             new ItemManager();
             new ChangeManager();
+            ///new SurvivorManager();
             //SetupAssists();
             AddHooks();
         }

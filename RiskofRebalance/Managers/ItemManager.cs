@@ -38,11 +38,23 @@ namespace RiskofRebalance.Managers
         {
             if (!commonEnabled) return;
             new BisonSteak();
+            /*
+            new StunGrenade(); 
+            new StickyBomb();
+            */
         }
 
         private void ModifyUncommon()
         {
             if (!uncommonEnabled) return;
+            /*
+            A little sneak peek for your troubles.
+            new HuntersHarpoon();
+            new Infusion();
+            new OldWarStealthkit();
+            new SquidPolyp();
+            new LeptonDaisy();
+            */
         }
 
         private void ModifyLegendary()
@@ -53,23 +65,54 @@ namespace RiskofRebalance.Managers
         private void ModifyVoid()
         {
             if (!voidEnabled) return;
-            new PlasmaShrimp();
+            //new PlasmaShrimp();
             new Polylute();
+            /*
+            new BenthicBloom();
+            new LostSeersLenses();
+            new Needletick();
+            new SingularityBand();
+            new Tentabauble();
+            */
         }
 
         private void ModifyBoss()
         {
             if (!bossEnabled) return;
+            /*
+            new DefenseNucleus();
+            new EmpathyCores();
+            new GenesisLoop();
+            new HalcyonSeed();
+
+            */
         }
 
         private void ModifyLunar()
         {
             if (!lunarEnabled) return;
+            /*
+            new Corpsebloom();
+            new StoneFluxPauldron();
+            new LightFluxPauldron();
+            new EulogyZero();
+            new BeadsOfFealty();
+            */
         }
 
         private void ModifyEquipment()
         {
             if (!equipmentEnabled) return;
+            /*
+            new HerBitingEmbrace();
+            new HisReassurance();
+            new IfritsDistinction();
+            new NkuhanasRetort();
+            new SharedDesign();
+            new SilenceBetweenTwoStrikes();
+            new SpectralCirclet();
+            new GooboJr();
+            */
         }
 
         private void ModifyItemTokens()

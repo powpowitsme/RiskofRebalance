@@ -11,6 +11,25 @@ namespace RiskofRebalance.Managers
     public class ChangeManager
     {
 
+#pragma warning disable IDE1006 // Naming Styles
+        internal static string languageRoot => System.IO.Path.Combine(ChangeManager.assemblyDir, "language");
+#pragma warning restore IDE1006 // Naming Styles
+
+#pragma warning disable IDE1006 // Naming Styles
+        internal static string assemblyDir
+#pragma warning restore IDE1006 // Naming Styles
+        {
+            get
+            {
+                return System.IO.Path.GetDirectoryName(RiskofRebalance.pluginInfo.Location);
+            }
+        }
+
+        public static void Init()
+        {
+            LoadLanguage();
+        }
+
         public static bool ReplaceSkillDef(SkillFamily skillFamily, SkillDef targetSkill, SkillDef newSkill)
         {
             bool successfullyReplaced = false;
@@ -30,7 +49,7 @@ namespace RiskofRebalance.Managers
 
             if (!successfullyReplaced)
             {
-                Debug.LogError("RiskyMod: Could not replace TargetSkill " + targetSkill);
+                Debug.LogError("Risk of Rebalance: Could not replace TargetSkill " + targetSkill);
             }
             return successfullyReplaced;
         }
@@ -50,7 +69,7 @@ namespace RiskofRebalance.Managers
 
         public static void FixSkillName(SkillDef skillDef)
         {
-            (skillDef as UnityEngine.Object).name = skillDef.skillName;// "RiskyMod_" + 
+            (skillDef as UnityEngine.Object).name = skillDef.skillName;// "RiskofRebalance_" + 
         }
 
         public static BuffDef CreateBuffDef(string name, bool canStack, bool isCooldown, bool isDebuff, Color color, Sprite iconSprite)
@@ -174,6 +193,24 @@ namespace RiskofRebalance.Managers
                     HandleRecalculateStatsInventoryActions.Invoke(self, self.inventory);
                 }
             }
+        }
+        private static void LoadLanguage()
+        {
+            On.RoR2.Language.SetFolders += fixme;
+        }
+
+        //Credits to Anreol for this code
+#pragma warning disable IDE1006 // Naming Styles
+        private static void fixme(On.RoR2.Language.orig_SetFolders orig, Language self, System.Collections.Generic.IEnumerable<string> newFolders)
+#pragma warning restore IDE1006 // Naming Styles
+        {
+            if (System.IO.Directory.Exists(ChangeManager.languageRoot))
+            {
+                var dirs = System.IO.Directory.EnumerateDirectories(System.IO.Path.Combine(ChangeManager.languageRoot), self.name);
+                orig(self, newFolders.Union(dirs));
+                return;
+            }
+            orig(self, newFolders);
         }
     }
 }

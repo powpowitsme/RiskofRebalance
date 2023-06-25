@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "RiskofRebalance": {
+      "commandName": "Project",
+      "remoteDebugEnabled": true,
+      "remoteDebugMachine": "127.0.0.1:55555"
+    }
+  }
+}

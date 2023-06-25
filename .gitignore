@@ -400,3 +400,4 @@ FodyWeavers.xsd
 /RiskofRebalance.sln
 /RiskofRebalance/Buffs/Collapse.cs
 /RiskofRebalance/Properties/launchSettings.json
+/RiskofRebalance/bin/Debug/netstandard2.0/RiskofRebalance.dll
